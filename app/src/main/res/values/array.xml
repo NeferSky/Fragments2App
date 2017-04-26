@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cats">
+        <item>Просто кот</item>
+        <item>Рыжик - рыжий кот</item>
+        <item>Барсик болеет за Барселону</item>
+        <item>Мурзик выписывает Мурзилку</item>
+    </string-array>
+</resources>
