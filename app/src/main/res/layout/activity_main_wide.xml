@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/layLandscapeContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="center_horizontal"
-    tools:context="nefersky.fragmentsapp.MainActivity">
+    tools:context="nefersky.fragments2app.MainActivity">
 
     <fragment
-        android:id="@+id/fragment1"
-        android:name="nefersky.fragmentsapp.Fragment1"
+        android:id="@+id/frButtons"
+        android:name="nefersky.fragments2app.Fragment1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        tools:layout="@layout/fragment1" />
+        tools:layout="@layout/fragment_buttons" />
 
     <fragment
-        android:id="@+id/fragment2"
-        android:name="nefersky.fragmentsapp.Fragment2"
+        android:id="@+id/frInfo"
+        android:name="nefersky.fragments2app.Fragment2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_weight="2"
-        tools:layout="@layout/fragment2" />
+        tools:layout="@layout/fragment_info" />
 </LinearLayout>
