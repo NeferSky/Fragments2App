@@ -1,4 +1,4 @@
-package nefersky.fragments2app;
+package nefersky.fragments3app;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

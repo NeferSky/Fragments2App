@@ -1,4 +1,4 @@
-package nefersky.fragments2app;
+package nefersky.fragments3app;
 
 import org.junit.Test;
 

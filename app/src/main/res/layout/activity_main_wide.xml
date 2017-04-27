@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:gravity="center_horizontal"
-    tools:context="nefersky.fragments2app.MainActivity">
+    tools:context="nefersky.fragments3app.MainActivity">
 
     <fragment
         android:id="@+id/frButtons"
-        android:name="nefersky.fragments2app.Fragment1"
+        android:name="nefersky.fragments3app.Fragment1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/frInfo"
-        android:name="nefersky.fragments2app.Fragment2"
+        android:name="nefersky.fragments3app.Fragment2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"

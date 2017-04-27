@@ -6,6 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context="nefersky.fragments2app.MainActivity">
+    tools:context="nefersky.fragments3app.MainActivity">
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package nefersky.fragments2app;
+package nefersky.fragments3app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

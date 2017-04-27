@@ -1,4 +1,4 @@
-package nefersky.fragments2app;
+package nefersky.fragments3app;
 
 import android.content.Intent;
 import android.support.v4.app.FragmentManager;
@@ -9,9 +9,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements Fragment1.OnSelectedButtonListener {
 
+    private boolean mIsDynamic;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        boolean mIsDynamic;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -34,12 +35,20 @@ public class MainActivity extends AppCompatActivity implements Fragment1.OnSelec
     @Override
     public void onButtonSelected(int buttonIndex) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment2 fragment2 = (Fragment2)fragmentManager.findFragmentById(R.id.frInfo);
-        if (fragment2 == null || !fragment2.isVisible()) {
-            Intent intent = new Intent(this, SecondActivity.class);
-            intent.putExtra("buttonIndex", buttonIndex);
-            startActivity(intent);
+        Fragment2 fragment2;
+
+        if (mIsDynamic){
+            FragmentTransaction ft = fragmentManager.beginTransaction();
+            fragment2 = new Fragment2();
+            Bundle args = new Bundle();
+            args.putInt(Fragment2.BUTTON_INDEX, buttonIndex);
+            fragment2.setArguments(args);
+            ft.replace(R.id.layPortraitContainer, fragment2, "fragment2");
+            ft.addToBackStack(null);
+            ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+            ft.commit();
         } else {
+            fragment2 = (Fragment2)fragmentManager.findFragmentById(R.id.frInfo);
             fragment2.showCatInfo(buttonIndex);
         }
     }
